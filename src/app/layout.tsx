@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className={styles.main}>
+        <div className={styles.layout}>
           <TheHeader />
           
           <main >{children}</main>

@@ -10,9 +10,9 @@ export const TheHeader = () => {
         </h2>
       </Link>
 
-      <Link href="/learn" className={styles.card}>
+      <Link href="/products" className={styles.card}>
         <h2>
-          Learn <span>-&gt;</span>
+          Products <span>-&gt;</span>
         </h2>
       </Link>
 
