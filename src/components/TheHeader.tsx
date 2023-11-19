@@ -1,11 +1,15 @@
-import styles from "@/app/page.module.css";
-import Link from "next/link";
 import { Navigation } from "./Navigation";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Products", href: "/products" },
+  { label: "About", href: "/about" },
+];
 
 export const TheHeader = () => {
   return (
     <header>
-      <Navigation />      
+      <Navigation navItems={navItems} />
     </header>
   );
 };

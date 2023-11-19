@@ -4,37 +4,33 @@ import styles from "@/app/page.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const Navigation = () => {
+type NavLink = {
+  label: string;
+  href: string;
+};
+
+type Props = { navItems: NavLink[] };
+
+export const Navigation = ({ navItems }: Props) => {
   const pathname = usePathname();
 
   return (
     <nav className={styles.navList}>
-      <Link
-        href="/"
-        className={pathname === "/" ? styles.active : styles.navCard}
-      >
-        <h2>
-          Home <span>-&gt;</span>
-        </h2>
-      </Link>
+      {navItems.map((item) => {
+        const isActive = pathname === item.href;
 
-      <Link
-        href="/products"
-        className={pathname === "/products" ? styles.active : styles.navCard}
-      >
-        <h2>
-          Products <span>-&gt;</span>
-        </h2>
-      </Link>
-
-      <Link
-        href="/about"
-        className={pathname === "/about" ? styles.active : styles.navCard}
-      >
-        <h2>
-          About <span>-&gt;</span>
-        </h2>
-      </Link>
+        return (
+          <Link
+            key={item.label}
+            href={item.href}
+            className={isActive ? styles.active : styles.navCard}
+          >
+            <h2>
+              {item.label} <span>-&gt;</span>
+            </h2>
+          </Link>
+        );
+      })}
     </nav>
   );
 };
