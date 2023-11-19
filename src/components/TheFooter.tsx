@@ -9,19 +9,19 @@ export const TheFooter = () => {
       </p>
       <div>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://vlmakh.github.io/my-portfolio/"
           target="_blank"
           rel="noopener noreferrer"
         >
           By{" "}
           <Image
-            src="/vercel.svg"
-            alt="Vercel Logo"
+            src="/vm_logo.svg"
+            alt="VM"
             className={styles.vercelLogo}
-            width={100}
+            width={60}
             height={24}
             priority
-          />
+          /> 2023
         </a>
       </div>
     </div>
