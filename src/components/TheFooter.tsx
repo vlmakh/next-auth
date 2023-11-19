@@ -5,7 +5,7 @@ export const TheFooter = () => {
   return (
     <div className={styles.footer}>
       <p>
-        Test material
+        FakeStoreApi
       </p>
       <div>
         <a
@@ -13,7 +13,7 @@ export const TheFooter = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          By{" "}
+          By 
           <Image
             src="/vm_logo.svg"
             alt="VM"
