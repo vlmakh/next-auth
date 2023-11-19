@@ -23,7 +23,7 @@ export default function RootLayout({
         <div className={styles.layout}>
           <TheHeader />
           
-          <main >{children}</main>
+          <main className={styles.main}>{children}</main>
           
           <TheFooter />
           </div>

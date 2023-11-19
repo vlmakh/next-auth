@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const TheFooter = () => {
   return (
-    <div className={styles.description}>
+    <div className={styles.footer}>
       <p>
         Test material
       </p>
