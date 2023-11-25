@@ -16,7 +16,7 @@ export const Navigation = ({ navItems }: Props) => {
   const pathname = usePathname();
   const session = useSession();
 
-  // console.log(session);
+  console.log(session);
 
   return (
     <nav className={styles.navList}>
@@ -37,11 +37,18 @@ export const Navigation = ({ navItems }: Props) => {
       })}
 
       {session?.data ? (
+        <>
+          <Link href="/profile" className={styles.navCard}>
+          <h2>
+            Profile <span>-&gt;</span>
+          </h2>
+        </Link>
         <Link href="/api/auth/signout" className={styles.navCard}>
           <h2>
             SignOut <span>-&gt;</span>
           </h2>
-        </Link>
+          </Link>
+        </>
       ) : (
         <Link href="/api/auth/signin" className={styles.navCard}>
           <h2>
